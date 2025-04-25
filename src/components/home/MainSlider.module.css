@@ -1,0 +1,239 @@
+/* 공통 적용 */
+.main-banner [class*='swiper-button'],
+.order-right [class*='order-button'],
+.quick-box [class*='quick-button'],
+.coupon-banner [class*='coupon-button'],
+.shop [class*='shop-button'],
+.event [class*='event-button'],
+.eatz [class*='eatz-button'] {
+  width: 40px;
+  height: 40px;
+}
+.order-right [class*='order-button'],
+.quick-box [class*='quick-button'],
+.coupon-banner [class*='coupon-button'],
+.shop [class*='shop-button'],
+.event [class*='event-button'],
+.eatz [class*='eatz-button'] {
+  position: absolute;
+  z-index: 10;
+}
+.order-right [class*='button-disabled'],
+.quick-box [class*='button-disabled'],
+.coupon-banner [class*='button-disabled'],
+.shop [class*='button-disabled'],
+.event [class*='button-disabled'],
+.eatz [class*='button-disabled'] {
+  background: transparent !important;
+  opacity: 0.7;
+}
+.main-banner [class*='swiper-button']::after,
+.order-right [class*='order-button']::after,
+.quick-box [class*='quick-button']::after,
+.coupon-banner [class*='coupon-button']::after,
+.shop [class*='shop-button']::after,
+.event [class*='event-button']::after,
+.eatz [class*='eatz-button']::after {
+  background: rgba(255, 255, 255, 0.8)
+    url(../../assets/images/icon/ui_ico_swiper_arr_h40.svg) no-repeat center /
+    cover;
+  content: '';
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.main-banner [class*='button-prev']::after,
+.order-right [class*='order-button-prev']::after,
+.quick-box [class*='quick-button-prev']::after,
+.coupon-banner [class*='coupon-button-prev']::after,
+.shop [class*='shop-button-prev']::after,
+.event [class*='event-button-prev']::after,
+.eatz [class*='eatz-button-prev']::after {
+  transform: rotate(180deg);
+}
+.order-right [class*='order-button']::after,
+.quick-box [class*='quick-button']::after,
+.coupon-banner [class*='coupon-button']::after,
+.shop [class*='shop-button']::after,
+.event [class*='event-button']::after,
+.eatz [class*='eatz-button']::after {
+  display: block;
+}
+
+/* 상단 스와이퍼 */
+.main-banner [class*='swiper-pagination'] {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  height: 26px;
+  font-size: 12px;
+  color: #fff;
+  background: rgb(85, 85, 85, 0.5);
+  padding: 2px 5px;
+  border-radius: 13px;
+  left: auto;
+  right: 50px;
+  bottom: 40px;
+  line-height: 26px;
+}
+.main-banner [class*='fraction'] {
+  padding-left: 5px;
+  line-height: 26px;
+}
+.main-banner [class*='pagination-btn'] {
+  font-size: 14px;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+.main-banner [class*='swiper-button-prev'] {
+  left: -20px;
+}
+.main-banner [class*='swiper-button-next'] {
+  left: auto;
+  right: 0;
+}
+
+/* 주소설정 탭 스와이퍼 OrderRight */
+.order-right [class*='order-button-prev'] {
+  left: 20px;
+  top: 45px;
+}
+.order-right [class*='order-button-next'] {
+  left: auto;
+  top: 0;
+  right: 20px;
+  width: 40px;
+  height: 185px;
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.order-right [class*='order-button-next']::after {
+  position: absolute;
+  top: 45px;
+  right: -20px;
+}
+
+/* 작은박스 스와이퍼 QuickBox */
+.quick-box [class*='quick-button-prev'] {
+  top: 110px;
+  left: -20px;
+}
+.quick-box [class*='quick-button-next'] {
+  right: 20px;
+  top: 80px;
+  width: 40px;
+  height: 100px;
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.quick-box [class*='quick-button-next']::after {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+}
+
+/* 바로 받는 쿠폰 스와이퍼 */
+.coupon-banner [class*='coupon-button'] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.coupon-banner [class*='coupon-button-prev'] {
+  left: -20px;
+}
+.coupon-banner [class*='coupon-button-next'] {
+  right: 0;
+  width: 60px;
+  height: 192px;
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.coupon-banner [class*='coupon-button-next']::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -20px;
+}
+
+/* 파퓰러 브랜드, 샵 브랜드 스와이퍼*/
+.popular-brand [class*='swiper-slide'],
+.shop-brand [class*='swiper-slide'] {
+  /* 크기 만큼 */
+  width: auto !important;
+}
+
+/* 샵 버튼 */
+.shop [class*='shop-button-prev'] {
+  top: 57px;
+  left: -20px;
+}
+.shop [class*='shop-button-next'] {
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.shop [class*='shop-button-next']::after {
+  position: absolute;
+  top: 57px;
+  right: -20px;
+}
+
+/* 이벤트 버튼 */
+.event [class*='event-button-prev'] {
+  top: 54px;
+  left: -20px;
+}
+.event [class*='event-button-next'] {
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+.event [class*='event-button-next']::after {
+  position: absolute;
+  top: 54px;
+  right: -20px;
+}
+
+/* 잇츠 티비 */
+.eatz [class*='swiper-horizontal'] {
+  padding: 0 40px !important;
+}
+.eatz [class*='eatz-button-prev'] {
+  top: 53px;
+  left: 20px;
+}
+.eatz [class*='eatz-button-next'] {
+  top: 53px;
+  right: 20px;
+}
+
+/* 스토어 쿠폰 메뉴 슬라이더 */
+.store-coupon [class*='swiper-slide'] {
+  width: auto !important;
+}
+
+@media (max-width: 890px) {
+  .main-banner [class*='button'],
+  .order-right [class*='button'],
+  .quick-box [class*='button'],
+  .coupon-banner [class*='button'],
+  .shop [class*='button'],
+  .event [class*='button'],
+  .eatz [class*='button'] {
+    display: none;
+  }
+
+  .main-banner [class*='swiper-slide'] {
+    max-width: none !important;
+    width: 100% !important;
+  }
+  .main-banner [class*='bgsize'] {
+    max-width: none !important;
+    width: 100% !important;
+    background-size: cover !important;
+  }
+}
